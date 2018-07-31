@@ -43,6 +43,13 @@ public class ShoppingCart {
 		 
 	 }
  }
+ public void updateCartItem(int index, int quantity) {
+	 try {
+		CartItem cartitem = this.cartItems.get(index);
+		cartitem.setQuantity(quantity);
+	 } catch (IndexOutOfBoundsException ex) {
+	}
+ }
  public double getOrderTotal() {
   return dblOrderTotal;
  }
